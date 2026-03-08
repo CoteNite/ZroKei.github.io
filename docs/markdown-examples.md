@@ -1,85 +1,53 @@
-# Markdown Extension Examples
+---
 
-This page demonstrates some of the built-in markdown extensions provided by VitePress.
+title: 我的第一篇飞行日志 
 
-## Syntax Highlighting
+description: 记录一次成功的坠机
 
-VitePress provides Syntax Highlighting powered by [Shiki](https://github.com/shikijs/shiki), with additional features like line-highlighting:
+---
 
-**Input**
+## 一、使用ODR、BSRR和BRR来设置GPIO引脚的状态各有不同的应用场景和优缺点
 
-````md
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
-```
-````
+### 1.ODR（OutPut Data Register）
 
-**Output**
+功能：直接设置GPIO引脚的输出状态。ODR控制所有引脚的输出电平状态，使用位操作可以同时设置多个引脚的状态。
 
-```js{4}
-export default {
-  data () {
-    return {
-      msg: 'Highlighted!'
-    }
-  }
-}
+优点：可以一次性设置多个引脚的状态。
+
+缺点：可能会影响其他引脚的状态，因为它直接覆盖寄存器的所有位。更改时需要确保不会不小心更改到其他引脚的状态。
+
+示例：
+
+```c
+GPIOD ->ODR = (1 << 2); //将第2个引脚设置为高电平，其余引脚保持原状
 ```
 
-## Custom Containers
+### 2.BSRR（Bit Set/Reset Register）
 
-**Input**
+功能：用于设置或重置特定的GPIO引脚。BSRR中的高位用于设置引脚为高电平，低位用于将引脚设置为低电平。
 
-```md
-::: info
-This is an info box.
-:::
+优点：只改变指定引脚的状态，而不影响其他引脚。适合需要频繁更改某些引脚的状态时使用。
 
-::: tip
-This is a tip.
-:::
+缺点：需要额外的位操作，通常在操作多个引脚是不如ODR方便。
 
-::: warning
-This is a warning.
-:::
+示例：
 
-::: danger
-This is a dangerous warning.
-:::
-
-::: details
-This is a details block.
-:::
+```c
+GPIOD -> BSRR = (1 << 2); //将第2个引脚设置为高电平
+GPIOD -> BSRR = (1 << (2 + 16)); //将第2个引脚设置为低电平
 ```
 
-**Output**
+### 3.BRR（Bit Reset Register）
 
-::: info
-This is an info box.
-:::
+功能：
 
-::: tip
-This is a tip.
-:::
+优点：
 
-::: warning
-This is a warning.
-:::
+缺点：
 
-::: danger
-This is a dangerous warning.
-:::
+示例：
 
-::: details
-This is a details block.
-:::
+```c
 
-## More
+```
 
-Check out the documentation for the [full list of markdown extensions](https://vitepress.dev/guide/markdown).
