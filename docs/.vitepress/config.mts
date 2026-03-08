@@ -16,7 +16,7 @@ export default defineConfig({
       // 开启图片懒加载
       lazyLoading: true
     },
-    [点我跳转：基础功能](#基础功能)
+    
   },
 
   //fav图标
