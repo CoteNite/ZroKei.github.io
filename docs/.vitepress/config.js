@@ -6,7 +6,7 @@ export default {
   },
   head: [
     // Meta for mobile
-    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }]
-    ['link', { rel: 'icon', href: '/logo.png' }]
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+    ['link', { rel: 'icon', href: '/logo.png' }],
   ]
 }
