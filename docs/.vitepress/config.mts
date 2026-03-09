@@ -21,7 +21,7 @@ export default defineConfig({
 
   //fav图标
   head: [
-      ['link',{ rel: 'icon', href: '/logo.png'}],
+      ['link',{ rel: 'icon', href: 'https://zrokei.github.io/logo.png'}],
   ],
 
   appearance:'dark', 
@@ -34,7 +34,7 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
-    logo: '/logo.png',
+    logo: 'https://zrokei.github.io/logo.png',
 
 
     //编辑本页
