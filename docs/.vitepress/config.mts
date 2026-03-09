@@ -21,7 +21,7 @@ export default defineConfig({
 
   //fav图标
   head: [
-      ['link',{ rel: 'icon', href: '/logo.png'}],
+      ['link',{ rel: 'icon', href: 'https://zrokei.github.io/logo.png'}],
   ],
 
   appearance:'dark', 
@@ -33,6 +33,9 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
+
+    logo: 'https://zrokei.github.io/logo.png',
+
 
     //编辑本页
     editLink: { 
@@ -56,7 +59,7 @@ export default defineConfig({
       //copyright: `Copyright © 2019-${new Date().getFullYear()} present Evan You`, 
     },
 
-    logo: '/logo.png',
+
     siteTitle: false, //标题隐藏
     nav: [
       { text: '首页', link: '/' },
