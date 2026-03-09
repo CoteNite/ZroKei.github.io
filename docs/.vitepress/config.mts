@@ -34,6 +34,9 @@ export default defineConfig({
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
+    logo: '/logo.png',
+
+
     //编辑本页
     editLink: { 
       pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path', // 改成自己的仓库
@@ -56,7 +59,7 @@ export default defineConfig({
       //copyright: `Copyright © 2019-${new Date().getFullYear()} present Evan You`, 
     },
 
-    logo: '/logo.png',
+
     siteTitle: false, //标题隐藏
     nav: [
       { text: '首页', link: '/' },
