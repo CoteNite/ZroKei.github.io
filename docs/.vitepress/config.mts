@@ -37,10 +37,10 @@ export default defineConfig({
 
     logo: '/logo.png',
 
-    siteTitle: '主页', //标题隐藏
+    siteTitle: 'ZroKei', //标题隐藏
     //导航栏
     nav: [
-      { text: '首页', link: '/' },
+      { text: '主页', link: '/' },
       { text: '学习记录', link: '/getting-started' },
       { text: '文档', link: '/posts/蓝桥杯嵌入式' },
       { text: `VitePress ${ pkg.devDependencies.vitepress.replace('^','') }`, link: 'https://vitepress.dev/zh/', noIcon: true },
