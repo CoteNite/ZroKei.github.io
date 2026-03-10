@@ -36,38 +36,15 @@ export default defineConfig({
 
     logo: '../public/logo.png',
 
-
-    //编辑本页
-    editLink: { 
-      pattern: 'https://github.com/vuejs/vitepress/edit/main/docs/:path', // 改成自己的仓库
-      text: '在GitHub编辑本页'
-    },
-    
-    outline: { 
-      level: [2,4], // 显示2-4级标题
-      // level: 'deep', // 显示2-6级标题
-      label: '当前页大纲' // 文字显示
-    },
-    // outline:false, // 关闭标题显示
-    // outlineTitle:'当前页大纲', //老方式设置标题
-
-    //页脚
-    footer: {
-      message: 'Released under the MIT License.',
-      copyright: 'Copyright © ${new Date().getFullYear()} ZroKei',
-      // 自动更新时间
-      //copyright: `Copyright © 2019-${new Date().getFullYear()} present Evan You`, 
-    },
-
-
-    siteTitle: false, //标题隐藏
+    siteTitle: 'ZroKei', //标题隐藏
+    //导航栏
     nav: [
       { text: '首页', link: '/' },
       { text: '学习记录', link: '/getting-started' },
       { text: '文档', link: '/posts/蓝桥杯嵌入式' },
       { text: `VitePress ${ devDependencies.vitepress.replace('^','') }`, link: 'https://vitepress.dev/zh/', noIcon: true },
     ],
-    
+    //侧边栏
     sidebar: [
       {
         text: '指南',
@@ -85,10 +62,30 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ZroKei' }
     ],
-
     //本地搜索
     search: {
       provider: 'local'
     },
+    //页脚
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: `Copyright © ${new Date().getFullYear()} ZroKei`,
+      // 自动更新时间
+      //copyright: `Copyright © 2019-${new Date().getFullYear()} present Evan You`, 
+    },
+    //编辑本页
+    editLink: { 
+      pattern: 'https://github.com/ZroKei/ZroKei.github.io/edit/main/docs/:path', // 改成自己的仓库
+      text: '在GitHub编辑本页'
+    },
+    
+    outline: { 
+      level: [2,4], // 显示2-4级标题
+      // level: 'deep', // 显示2-6级标题
+      label: '当前页大纲' // 文字显示
+    },
+    // outline:false, // 关闭标题显示
+    // outlineTitle:'当前页大纲', //老方式设置标题
+    
   }
 })
