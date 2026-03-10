@@ -37,7 +37,7 @@ export default defineConfig({
 
     logo: '/logo.png',
 
-    siteTitle: 'ZroKei', //标题隐藏
+    siteTitle: '主页', //标题隐藏
     //导航栏
     nav: [
       { text: '首页', link: '/' },
