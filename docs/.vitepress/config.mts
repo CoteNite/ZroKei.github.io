@@ -32,12 +32,16 @@ export default defineConfig({
     hostname: 'https://zrokei.github.io',
   },
 
+  lastUpdated: true, //首次配置不会立即生效，需git提交后爬取时间戳
+
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
 
     logo: '/logo.png',
 
     siteTitle: 'ZroKei', //标题隐藏
+    //返回顶部文字修改
+    returnToTopLabel:'返回顶部', 
     //导航栏
     nav: [
       { text: '主页', link: '/' },
@@ -60,6 +64,15 @@ export default defineConfig({
         ],
       },
     ],
+
+    //上次更新时间
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'short', // 可选值full、long、medium、short
+        timeStyle: 'medium' // 可选值full、long、medium、short
+      },
+    },
 
     socialLinks: [
       { icon: 'github', link: 'https://github.com/ZroKei' }
