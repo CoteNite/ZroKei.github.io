@@ -65,6 +65,12 @@ export default defineConfig({
       },
     ],
 
+    //自定义上下页名
+    docFooter: { 
+      prev: '上一页', 
+      next: '下一页', 
+    }, 
+
     //上次更新时间
     lastUpdated: {
       text: '最后更新于',
