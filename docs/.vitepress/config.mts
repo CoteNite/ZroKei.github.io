@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import pkg from '../../package.json' assert { type: 'json' }
 import { assert } from 'node:console'
+import { nav } from './configs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -36,7 +37,9 @@ export default defineConfig({
 
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
-
+    //导航栏
+    nav,
+    //标题logo
     logo: '/logo.png',
 
     siteTitle: 'ZroKei', //标题隐藏
