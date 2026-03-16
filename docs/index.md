@@ -6,9 +6,7 @@ hero:
   name: "这里是停机坪"
   text: "允许起飞"
   tagline: 传奇坠机王
-  image:
-    src: /logo.png
-    alt: ZroKei
+  
   actions:
     - theme: brand
       text: 文档
