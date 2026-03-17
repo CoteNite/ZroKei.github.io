@@ -12,9 +12,11 @@ body {
   -webkit-backdrop-filter: none !important; /* 取消 Safari 模糊 */
   border-top: none !important;              /* 去掉顶部分割线，防止割裂感 */
 }
-/* 1. 让导航栏透明 */
+/* 1. 让导航栏透明并取消毛玻璃模糊 */
 .VPNav {
   background-color: transparent !important;
+  backdrop-filter: none !important;         /* 核心：取消模糊效果 */
+  -webkit-backdrop-filter: none !important; /* 兼容 Safari */
   border-bottom: none !important;
 }
 
